@@ -9,7 +9,7 @@ logger_path = "./breakoutlog"
 logger = configure(logger_path, ["stdout", "csv", "tensorboard"])
 
 # We use parallel environments to speed-up the training process
-vec_env = make_vec_env("ALE/Breakout-v5", n_envs=4)
+vec_env = make_vec_env("ALE/Breakout-ram-v5", n_envs=4)
 
 # Custom MLP policy of two layers of size 32 each with Relu activation function
 policy_kwargs = dict(
